@@ -28,7 +28,37 @@ plot(df$time, df$UW, type='l', xlab = "Time", ylab = "Score", main = "UW (blue) 
 lines(df$time, df$MSU)
 
 
-#----------------------------------------------------------------------------------------#
-#number 2  
+#--------------------------------------------------------------------------------------------------------------------#
+#number 2 - guess my number
+print("I'm thinking of a number 1-100...")
+v <- c(1:100)
+myNum <- sample(v, 1)
+myNum
+
+guessNum <- function(myNum) {
+  input <- as.integer(readline(prompt="Guess: "))
+
+# go into while loop if the guess is not correct
+  while (myNum != input) {
+   if(input < myNum) {
+      print("Higher")
+    }
+    if(input > myNum) {
+      print("Lower")
+   }
+   input <- as.integer(readline(prompt="Guess: "))
+  }
+
+# leave while loop once guess is correct
+  if (myNum == input) {
+    print("Correct!")
+  }
+}
+
+guessNum(myNum)
+
+
+
+
   
   
