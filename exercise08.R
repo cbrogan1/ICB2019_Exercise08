@@ -33,7 +33,6 @@ lines(df$time, df$MSU)
 print("I'm thinking of a number 1-100...")
 v <- c(1:100)
 myNum <- sample(v, 1)
-myNum
 
 guessNum <- function(myNum) {
   input <- as.integer(readline(prompt="Guess: "))
